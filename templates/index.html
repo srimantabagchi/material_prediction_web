@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home page</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+</head>
+
+<body>
+  <!-- As a heading -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <a class="navbar-brand" href="#">Materials Prediction Web</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+  <div class="container">
+    <main role="main" class="container">
+      <div class="jumbotron">
+        <h1>Output Prediction Form</h1>
+      </div>
+    </main>
+    <form action="{% url 'result' %}">
+      {% csrf_token %}
+
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="HMA_C">Hot Metal Carbon %</label>
+            <input type="text" class="form-control" type="text" name="HMA_C" placeholder="Enter the Hot Metal Carbon %">
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="HMA_MN">Hot Metal Manganese %</label>
+            <input type="text" class="form-control" type="text" name="HMA_MN"
+              placeholder="Enter the Hot Metal Manganese %">
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="HMA_S">Hot Metal Sulfur %</label>
+            <input type="text" class="form-control" type="text" name="HMA_S" placeholder="Enter the Hot Metal Sulfur %">
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="HMA_P">Hot Metal Phosphorus %</label>
+            <input type="text" class="form-control" type="text" name="HMA_P"
+              placeholder="Enter the Hot Metal Phosphorus %">
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="HMA_SI">Hot Metal Silicon %</label>
+            <input type="text" class="form-control" type="text" name="HMA_SI"
+              placeholder="Enter the Hot Metal Silicon %">
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="HMA_TI">Hot Metal Titanium %</label>
+            <input type="text" class="form-control" type="text" name="HMA_TI"
+              placeholder="Enter the Hot Metal Titanium %">
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="HMA_CR">Hot Metal Chromium %</label>
+            <input type="text" class="form-control" type="text" name="HMA_CR"
+              placeholder="Enter the Hot Metal Chromium %">
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="BLOW_DUR">Blow Duration (mins)</label>
+            <input type="text" class="form-control" type="text" name="BLOW_DUR"
+              placeholder="Enter the Blow Duration (mins)">
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="HMWT">Hot Metal Weight (Tons)</label>
+            <input type="text" class="form-control" type="text" name="HMWT"
+              placeholder="Enter the Hot Metal Weight (Tons)">
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="SCP">Scrap Weight (Tons)</label>
+            <input type="text" class="form-control" type="text" name="SCP" placeholder="Enter the Scrap Weight (Tons)">
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="HMTEMP">Hot Metal Temperature (°C)</label>
+            <input type="text" class="form-control" type="text" name="HMTEMP"
+              placeholder="Enter the 	Hot Metal Temperature (°C)">
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="LIME">Lime Weight (Tons)</label>
+            <input type="text" class="form-control" type="text" name="LIME" placeholder="Enter the Lime Weight (Tons)">
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-2">
+            <label for="DOLO">Dolomite Weight (Tons)</label>
+            <input type="text" class="form-control" type="text" name="DOLO"
+              placeholder="Enter the Dolomite Weight (Tons)">
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-2">
+            <label for="ORE">Iron Ore Weight (Tons)</label>
+            <input type="text" class="form-control" type="text" name="ORE"
+              placeholder="Enter the Iron Ore Weight (Tons)">
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+          <div class="col-md-4 mb-2">
+            <label for="OXY">Total Oxygen Volume (Nm3)</label>
+            <input type="text" class="form-control" type="text" name="OXY"
+              placeholder="Enter the Total Oxygen Volume (Nm3)">
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Get Predictions</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <nav class="navbar fixed-bottom navbar-light bg-light">
+      <a class="navbar-brand" href="#">Material Science Inc.</a>
+    </nav>
+    <!--
+<footer class="footer">
+      <div class="container">
+        <span class="text-muted">.</span>
+      </div>
+    </footer>
+    -->
+
+  </div>
+
+</body>
+
+</html>
